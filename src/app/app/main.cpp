@@ -22,7 +22,6 @@ int main(int argc, char** argv) {
   if (result.count("file") > 1) {
     std::vector<std::string> files =
         result["file"].as<std::vector<std::string>>();
-    // std::cout << "File1: " << files[0] << " File2:" << files[1] << '\n';
     cfrq::calcfreq(files[0], files[1]);
   } else {
     std::cout << options.help();

@@ -16,6 +16,10 @@ void strToLower(std::string& str) {
 void calcfreq(const std::string& input, const std::string& output) {
   std::ifstream inp(input);
 
+  if (!inp.is_open()) {
+    throw std::runtime_error("Error opening file\n");
+  }
+
   std::string word;
   std::map<std::string, int> result;
   while (inp >> word) {
